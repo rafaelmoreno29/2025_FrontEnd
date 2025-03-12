@@ -8,5 +8,12 @@ import { Component } from '@angular/core';
   styleUrl: './home.component.css'
 })
 export class HomeComponent {
+  num1: number = 10;
+  num2 = 20;
+  urlImagem: String =
+    "https://facens.br/wp-content/uploads/2021/03/logo-f.png";
 
+  somar() {
+    this.num2++;
+  }
 }
