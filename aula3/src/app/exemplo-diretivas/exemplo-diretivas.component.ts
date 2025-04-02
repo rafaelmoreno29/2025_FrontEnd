@@ -2,6 +2,7 @@ import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { Pessoa } from '../models/Pessoa';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-exemplo-diretivas',
@@ -11,6 +12,9 @@ import { Pessoa } from '../models/Pessoa';
   styleUrl: './exemplo-diretivas.component.css'
 })
 export class ExemploDiretivasComponent {
+
+  constructor(private route: Router) { }
+
   exibirTabela: boolean = true;
   nome: string = '';
   pessoas: Pessoa[] = [
@@ -18,4 +22,8 @@ export class ExemploDiretivasComponent {
     { nome: 'Maria', id: 2, cidade: 'Sorocaba', celular: '999999999' },
     { nome: 'José', id: 3, cidade: 'Votorantim', celular: '999999999' },
   ];
+
+  abrirDetalhe(id: number) {
+    this.route.navigate(['detalhe', id]);
+  }
 }
