@@ -2,7 +2,7 @@
     <label for="nome" class="form-label">Nome:</label>
     <input type="text" formControlName="nome" class="form-control">
 
-    <div *ngIf="form.get('nome')?.invalid 
+    <div class="invalid" *ngIf="form.get('nome')?.invalid 
         && (form.get('nome')?.dirty || form.get('nome')?.touched)">
         <div *ngIf="form.get('nome')?.errors?.['required']">
             Nome é obrigatório</div>
@@ -11,9 +11,14 @@
     <label for="celular" class="form-label">Celular:</label>
     <input type="text" formControlName="celular" class="form-control">
 
+    <div class="invalid" *ngIf="form.get('celular')?.invalid 
+    && (form.get('celular')?.dirty || form.get('celular')?.touched)">
+        <div *ngIf="form.get('celular')?.errors?.['required']">
+            Celular é obrigatório</div>
+    </div>
     <label for="cidade" class="form-label">Cidade:</label>
     <input type="text" formControlName="cidade" class="form-control">
 
-    <button type="submit" [disabled]="!form.valid">Salvar</button>
+    <button class="btn btn-primary" type=" submit" [disabled]="!form.valid">Salvar</button>
 
 </form>
