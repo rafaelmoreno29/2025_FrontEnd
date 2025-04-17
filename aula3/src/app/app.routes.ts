@@ -9,6 +9,7 @@ import { TelaFilho2Component } from './tela-filho2/tela-filho2.component';
 import { ExemploDiretivasComponent } from './exemplo-diretivas/exemplo-diretivas.component';
 import { ClienteDetalheComponent } from './cliente-detalhe/cliente-detalhe.component';
 import { CadastroUsuarioComponent } from './cadastro-usuario/cadastro-usuario.component';
+import { CadastroPessoaComponent } from './cadastro-pessoa/cadastro-pessoa.component';
 
 export const routes: Routes = [
     { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -25,5 +26,6 @@ export const routes: Routes = [
     { path: 'exemplo-diretivas', component: ExemploDiretivasComponent },
     { path: 'detalhe/:id', component: ClienteDetalheComponent },
     { path: 'cadastro-usuario', component: CadastroUsuarioComponent },
+    { path: 'cadastro-pessoa', component: CadastroPessoaComponent },
     { path: '**', component: PaginaNaoEncontradaComponent }
 ];

@@ -1,8 +1,6 @@
 <form #form="ngForm" (ngSubmit)="salvar()">
     <div class="row">
         <div class="col-md-12">
-
-
             <label for="nome" class="form-label">Nome:</label>
             <input type="text" name="nome" class="form-control" [(ngModel)]="usuario.nome" required>
 
@@ -26,7 +24,6 @@
             </div>
             <input id="ativo" type="checkbox" name="ativo" [(ngModel)]="usuario.ativo">
             <label for="ativo" class="form-label"> Ativo</label>
-
         </div>
     </div>
     <div class="row">
