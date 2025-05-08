@@ -1,6 +1,8 @@
 
-const produtos = [];
-let ultimoId = 1;
+const produtos = [
+    { id: 1, nome: "Produto 1", valor: 50, temEstoque: true }
+];
+let ultimoId = 2;
 exports.inserir = (req, res) => {
     const { nome, valor, temEstoque } = req.body;
     const produto = { id: ultimoId, nome, valor, temEstoque };
